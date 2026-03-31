@@ -6,3 +6,12 @@ sealed class SearchEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
+final class OnSearchSubmitted extends SearchEvent {
+  final String cityName;
+
+  const OnSearchSubmitted({required this.cityName});
+
+  @override
+  List<Object> get props => [cityName];
+}
